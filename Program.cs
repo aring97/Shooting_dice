@@ -58,8 +58,13 @@ namespace ShootingDice
             catch(System.Exception){System.Console.WriteLine("The sore loser left.");}
             System.Console.WriteLine("------------------");
 
+            UpperHalfPlayer upper= new UpperHalfPlayer();
+            upper.Name="Jay";
+            upper.Play(player1);
+            System.Console.WriteLine("------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smack, higher, human, csmack
+                player1, player2, player3, large, smack, higher, human, csmack, sore
             };
 
             PlayMany(players);
