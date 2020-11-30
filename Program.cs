@@ -63,8 +63,14 @@ namespace ShootingDice
             upper.Play(player1);
             System.Console.WriteLine("------------------");
 
+            SoreLoserUpperHalfPlayer soreUpper=new SoreLoserUpperHalfPlayer();
+            soreUpper.Name="Austin";
+            try{soreUpper.Play(player1);}
+            catch(System.Exception){System.Console.WriteLine("The sore loser left.");}
+            System.Console.WriteLine("------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smack, higher, human, csmack, sore
+                player1, player2, player3, large, smack, higher, human, csmack, sore, upper, soreUpper
             };
 
             PlayMany(players);
