@@ -52,6 +52,12 @@ namespace ShootingDice
             csmack.Play(player1);
             System.Console.WriteLine("------------------");
 
+            SoreLoserPlayer sore=new SoreLoserPlayer();
+            sore.Name="steven";
+            try{sore.Play(player1);}
+            catch(System.Exception){System.Console.WriteLine("The sore loser left.");}
+            System.Console.WriteLine("------------------");
+
             List<Player> players = new List<Player>() {
                 player1, player2, player3, large, smack, higher, human, csmack
             };
