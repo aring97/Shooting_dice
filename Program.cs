@@ -37,8 +37,13 @@ namespace ShootingDice
             smack.Play(player1);
             System.Console.WriteLine("------------------");
 
+            OneHigherPlayer higher=new OneHigherPlayer();
+            higher.Name="higgs";
+            higher.Play(player1);
+            System.Console.WriteLine("------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+                player1, player2, player3, large, smack
             };
 
             PlayMany(players);
